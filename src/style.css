@@ -294,3 +294,36 @@ code {
     border-right-color: var(--border);
   }
 }
+
+#radar-display {
+  position: relative;
+  width: min(90%, 720px);
+  height: 420px;
+  margin: 24px auto;
+  border: 1px solid #36e88a;
+  border-radius: 12px;
+  background-color: #07140f;
+  background-image:
+    linear-gradient(rgba(54, 232, 138, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(54, 232, 138, 0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
+  overflow: hidden;
+}
+
+.aircraft-marker {
+  position: absolute;
+  width: 12px;
+  height: 18px;
+  background: #57f287;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  filter: drop-shadow(0 0 4px #57f287);
+  transform: translate(-50%, -50%);
+}
+
+.aircraft-marker.no-track {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #e1ffe9;
+  border-radius: 50%;
+  clip-path: none;
+}
